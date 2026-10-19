@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Arduino build output (arduino-cli --output-dir / --build-path)
+build/
+*.elf
+*.hex
+*.bin
+*.map
+*.uf2
+*.eep
+*.lst
+
+# Arduino CLI / IDE 2 local state
+.arduino/
+.arduino15/
+.theia/
+.vscode/ipch/
+arduino-cli.yaml
+sketch.json.bak
+
+# Credentials (keep a secrets.h.example in git instead)
+secrets.h
+arduino_secrets.h
+
+# Editor
+.idea/
+*.swp
+*~

@@ -28,27 +28,27 @@ void setup() {
 
   Modulino.begin();
   // Initialize the Modulino Thermo and halt if the sensor is not detected
-  if (!thermo.begin()); {
+  if (!thermo.begin()) {
     Serial.println("- Modulino Thermo not detected! Check the Qwiic connection...");
     while (1);
   }
   Serial.println("Modulino Worked");
-  // lcd.init();
-  // lcd.backlight();
-  // lcd.setCursor(0, 0);
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
 }
 
 void loop() {
-  // float temperature = thermo.getTemperature();
-  // float humidity = thermo.getHumidity();
-  // // lcd.setCursor(0, 0);
-  // // lcd.print("Temperature ");
-  // // lcd.setCursor(13, 0);
-  // // lcd.print(temperature);
-  // // lcd.setCursor(0, 1);
-  // // lcd.print("Humidity ");
-  // // lcd.setCursor(9, 0);
-  // // lcd.print(humidity);
-  // Serial.println("loop");
-  // delay(1000);
+  float temperature = thermo.getTemperature();
+  float humidity = thermo.getHumidity();
+  lcd.setCursor(0, 0);
+  lcd.print("Temperature ");
+  lcd.setCursor(13, 0);
+  lcd.print(temperature);
+  lcd.setCursor(0, 1);
+  lcd.print("Humidity ");
+  lcd.setCursor(9, 0);
+  lcd.print(humidity);
+  Serial.println("loop");
+  delay(1000);
 }
